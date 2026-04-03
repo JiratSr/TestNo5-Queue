@@ -1,0 +1,71 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center; 
+}
+
+.page-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+  padding: 60px 40px;
+  gap: 24px;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  font-family: inherit;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):active {
+    transform: scale(0.97);
+  }
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+
+  &:not(:disabled):hover {
+    background-color: #2563eb;
+  }
+}
+
+.btn-secondary {
+  background-color: #d1d5db;
+  color: #374151;
+  font-size: 15px;
+  padding: 12px 32px;
+
+  &:not(:disabled):hover {
+    background-color: #9ca3af;
+  }
+}
+
+.btn-get-queue {
+  min-width: 200px;
+  padding: 20px 48px;
+  font-size: 22px;
+  border-radius: 12px;
+}

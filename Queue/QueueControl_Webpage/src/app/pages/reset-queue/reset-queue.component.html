@@ -1,0 +1,31 @@
+<div class="page-wrapper">
+  <div class="topbar">IT 05-3</div>
+
+  <div class="page-content">
+    <button
+      class="btn btn-primary"
+      (click)="onReset()"
+      [disabled]="isLoading"
+    >
+      @if (!isLoading) {
+        <span>ล้างคิว</span>
+      } @else {
+        <span>กำลังล้างคิว...</span>
+      }
+    </button>
+
+    @if (resetSuccess) {
+      <div class="reset-success">
+        <p class="success-text">✅ ล้างคิวเรียบร้อยแล้ว</p>
+       
+      </div>
+    } @else {
+      <h2 class="label">หมายเลขคิวปัจจุบัน</h2>
+      <div class="queue-number">{{ currentQueueDisplay }}</div>
+    }
+
+    <button class="btn btn-primary" (click)="onBack()">
+      กลับไปหน้ารับบัตรคิว
+    </button>
+  </div>
+</div>

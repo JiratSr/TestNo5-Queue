@@ -1,0 +1,24 @@
+<div class="page-wrapper">
+  <div class="topbar">IT 05-1</div>
+  <div class="page-content">
+    <button
+      class="btn btn-primary btn-get-queue"
+      (click)="onGetQueue()"
+      [disabled]="isLoading"
+    >
+      @if (!isLoading) {
+        <span>รับบัตรคิว</span>
+      } @else {
+        <span>กำลังดำเนินการ...</span>
+      }
+    </button>
+
+    <button
+      class="btn btn-secondary"
+      (click)="onResetQueue()"
+      [disabled]="isLoading"
+    >
+      ล้างคิว
+    </button>
+  </div>
+</div>
